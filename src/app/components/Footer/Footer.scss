@@ -1,0 +1,46 @@
+.footer {
+    position: relative;
+    border-top: solid .5rem #7A6C00;
+
+    &__upper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #262727;
+    }
+
+    &__upper-container {
+        width: 110rem;
+        max-width: 110rem;
+        margin: 3rem 0 2.6rem;
+    }
+
+    &__logo {
+        height: 10.7rem;
+        width: auto;
+    }
+
+    &__lower {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #1e1f1f;
+    }
+
+    &__socials-container {
+        width: 110rem;
+        max-width: 110rem;
+        margin: 3rem 0 2.6rem;
+        list-style: none;
+    }
+
+    &__socials-image {
+        filter: invert(100%) sepia(40%) saturate(0%) hue-rotate(19deg) brightness(108%) contrast(100%);
+        cursor: pointer;
+
+        &:hover {
+            filter: none;
+            content: url("../../../../public/images/footer/linkedin-colour-icon.svg"); 
+        }
+    }
+}

@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import ArticleOneImage from "../../public/images/home/article-one-image.webp";
 import ArticleTwoImage from "../../public/images/home/article-two-image.webp";
+import Footer from "./components/Footer/Footer";
 import "./styles/home.scss";
 
 export default function Home() {
@@ -36,7 +37,7 @@ export default function Home() {
           <li className="news__item">
             <article className="news__article">
               <Link className="news__article-link" href="/">
-                <Image className="news__article-image" src={ArticleOneImage} alt =""/>
+                <Image className="news__article-image" src={ArticleOneImage} alt ="Article"/>
                 <h3 className="news__article-header">South West will be presenting during the next CNIC event: “Exploring the Canadian Isotope Ecosystem”, Wednesday, July 14</h3>
               </Link>
               <time className="news__article-date">12 August 2021</time>
@@ -47,7 +48,7 @@ export default function Home() {
           <li className="news__item">
             <article className="news__article">
               <Link className="news__article-link" href="">
-                <Image className="news__article-image" src={ArticleTwoImage} alt =""/>
+                <Image className="news__article-image" src={ArticleTwoImage} alt ="Article"/>
                 <h3 className="news__article-header">South West Exposures signs a distribution agreement with Gamma Gurus</h3>
               </Link>
               <time className="news__article-date">12 August 2021</time>
@@ -58,6 +59,7 @@ export default function Home() {
         </ul>
       </section>
       <div className="home__filler"></div>
+      <Footer />
     </main>
   );
 }
