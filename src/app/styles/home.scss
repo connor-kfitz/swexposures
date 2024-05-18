@@ -1,0 +1,51 @@
+.home {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15rem 0;
+
+    &:before {
+        content: "";
+        display: block;
+        background-image: url("../../../public/images/welcome-background.jpg");
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        opacity: .5;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 10;
+    }
+
+    &__header {
+        font-size: 4.2rem;
+        margin-bottom: 6rem;
+        text-align: center;
+    }
+
+    &__content-list {
+        max-width: 55.5rem;
+        margin: 0 5.9rem 4rem;
+    }
+
+    &__list-item {
+        font-size: 2rem;
+    }
+
+    &__about-link {
+        background-color: #0da4d3;
+        padding: 1.3rem 1.6rem;
+        font-size: 1.3rem;
+        text-decoration: none;
+        color: inherit;
+        font-weight: bold;
+    }
+}
