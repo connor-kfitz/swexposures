@@ -1,4 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
+import ArticleOneImage from "../../public/images/home/article-one-image.webp";
+import ArticleTwoImage from "../../public/images/home/article-two-image.webp";
 import "./styles/home.scss";
 
 export default function Home() {
@@ -27,6 +30,34 @@ export default function Home() {
           </footer>
         </blockquote>
       </section>
+      <section className="news">
+        <h2 className="news__header">Latest News</h2>
+        <ul className="news__content-container">
+          <li className="news__item">
+            <article className="news__article">
+              <Link className="news__article-link" href="/">
+                <Image className="news__article-image" src={ArticleOneImage} alt =""/>
+                <h3 className="news__article-header">South West will be presenting during the next CNIC event: “Exploring the Canadian Isotope Ecosystem”, Wednesday, July 14</h3>
+              </Link>
+              <time className="news__article-date">12 August 2021</time>
+              <p className="news__article-text">South West will be presenting during the next CNIC event: “Exploring the Canadian Isotope Ecosystem”, Wednesday, July 14 Join CNIC partners and South West Exposures to explore in depth some of the critical companies changing the landscape of medical isotope production in Canada and their impact on improving patient care around the world. Shaun Rhamdany…</p>
+              <Link className="news__article-read-more" href="">Read More</Link>
+            </article>
+          </li>
+          <li className="news__item">
+            <article className="news__article">
+              <Link className="news__article-link" href="">
+                <Image className="news__article-image" src={ArticleTwoImage} alt =""/>
+                <h3 className="news__article-header">South West Exposures signs a distribution agreement with Gamma Gurus</h3>
+              </Link>
+              <time className="news__article-date">12 August 2021</time>
+              <p className="news__article-text">South West Exposures signs a distribution agreement with Gamma Gurus Toronto, Sydney, July 2 nd 2020 South West Exposures (Toronto, Canada) and Gamma Gurus (Sydney, Australia) have entered into adistribution agreement to bring South West Exposures’ (SWE) technologies into Australia and New-Zealand, including its break-through Theranostic products. “SWE is committed to developing products and solutions…</p>
+              <Link className="news__article-read-more" href="">Read More</Link>
+            </article>
+          </li>
+        </ul>
+      </section>
+      <div className="home__filler"></div>
     </main>
   );
 }
