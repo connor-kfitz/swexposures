@@ -1,4 +1,4 @@
-export default function News() {
+export default function Article() {
   return (
     <div>
       
