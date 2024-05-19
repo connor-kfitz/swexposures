@@ -1,0 +1,40 @@
+.company-history {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    color: #5a5b5c;
+    padding: 5rem 5rem 10rem;
+
+    &__container {
+        display: flex;
+        max-width: 150rem;
+    }
+
+    &__image-container {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        margin-right: 4rem;
+        flex: 1 0 30%;
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+    }
+
+    &__header {
+        font-size: 4.6rem;
+        margin-bottom: 1rem;
+    }
+
+    &__text {
+        font-size: 2rem;
+        line-height: 1.8;
+
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+}
