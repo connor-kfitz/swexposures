@@ -13,11 +13,11 @@ export const navItems: NavItem[] = [
     },
     {
         name: 'Type A Package',
-        path: '/type'
+        path: '/type-a-package'
     },
     {
         name: 'How To Buy',
-        path: '/buy'
+        path: '/how-to-buy'
     },
     {
         name: 'News',
@@ -25,6 +25,6 @@ export const navItems: NavItem[] = [
     },
     {
         name: 'Quote & Information Request',
-        path: '/quotes'
+        path: '/contact'
     }
   ]
