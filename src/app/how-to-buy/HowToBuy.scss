@@ -1,0 +1,71 @@
+.how-to-buy {
+    background-color: #fff;
+    color: #5a5b5c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 5rem 10rem;
+
+    &__container {
+        max-width: 120rem;
+    }
+
+    &__header {
+        font-size: 4.6rem;
+        margin-bottom: 3rem;
+    }
+
+    &__text {
+        font-size: 3.4rem;
+        margin-bottom: 14rem;
+    }
+
+    &__link-container {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        margin-bottom: 12rem;
+    }
+
+    &__link-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__link-header {
+        font-size: 2.3rem;
+        margin-bottom: 2rem;
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: #929394;
+        padding: 3rem 3rem 0;
+
+        &:hover {
+            box-shadow: #7A6C00 .2rem .2rem .5rem .1rem;
+            border-radius: .3rem;
+        }
+    }
+
+    &__link-image {
+        max-width: 37.1rem;
+        height: auto;
+        margin-bottom: 2.5rem;
+    }
+
+    &__contact-text {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    &__contact-link {
+        color: #7A6C00;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}

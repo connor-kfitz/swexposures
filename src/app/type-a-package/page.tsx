@@ -12,13 +12,13 @@ export default function TypeAPackage() {
           <h3 className="specifications__header">Specifications:</h3>
           <ul className="specifications__image-container">
             <li className="specifications__image-item">
-              <Image className="specifications__image" src={Contents} alt=""/>
+              <Image className="specifications__image" src={Contents} alt="Unpacked Container"/>
             </li>
             <li className="specifications__image-item">
-              <Image className="specifications__image" src={Bag} alt=""/>
+              <Image className="specifications__image" src={Bag} alt="Container"/>
             </li>
             <li className="specifications__image-item">
-              <Image className="specifications__image" src={Thermometer} alt=""/>
+              <Image className="specifications__image" src={Thermometer} alt="Thermometer"/>
             </li>         
           </ul>
           <ul className="specifications__text-list">
