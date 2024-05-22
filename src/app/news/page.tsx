@@ -15,8 +15,7 @@ export default function News() {
             <NewsArticle
               key={index}
               id={article.id} image={article.image} alt={article.alt} title={article.title} 
-              description={article.description} link={article.link} 
-              author={article.author} date={article.date}
+              description={article.description} author={article.author} date={article.date}
             />
           ))}
         </div>

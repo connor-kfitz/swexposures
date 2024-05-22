@@ -11,4 +11,5 @@ type NewsArticle = {
     description: string,
     author: string,
     date: string
+    tags: string[]
 }

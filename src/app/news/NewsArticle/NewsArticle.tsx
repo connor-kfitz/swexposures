@@ -7,7 +7,6 @@ type NewsArticleProps = {
     alt: string,
     title: string,
     description: string,
-    link: string,
     author: string,
     date: string
 }
