@@ -5,12 +5,12 @@ import "./News.scss";
 export default function News() {
 
   return (
-    <main className="news">
-      <section className="latest-news">
-        <div className="latest-news__header-background">
-          <h1 className="latest-news__header">Latest News</h1>
+    <main className="news-page">
+      <section className="news-section">
+        <div className="news-section__header-background">
+          <h1 className="news-section__header">Latest News</h1>
         </div>
-        <div className="latest-news__content">
+        <div className="news-section__content">
           {NewsArticles.map((article, index) => (
             <NewsArticle
               key={index}
