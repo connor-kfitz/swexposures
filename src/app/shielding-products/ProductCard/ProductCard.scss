@@ -1,0 +1,42 @@
+.product-card {
+    flex: 0 0 33.33%;
+    margin-bottom: 6rem;
+
+    &__link {
+        display: block;
+        text-decoration: none;
+        color: #5a5b5c;
+        margin: 0 1rem;
+        transition: .3s;
+
+        &:hover {
+            scale: 1.02;
+        }
+    }
+
+    &__image-container {
+        display: flex;
+        justify-content: flex-start;
+        height: 30rem;
+        max-height: 30rem;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    &__name {
+        font-size: 1.8rem;
+    }
+
+    &__model {
+        font-style: italic;
+        margin-bottom: 1.5rem;
+        font-size: 1.4rem;
+    }
+
+    &__description {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+}

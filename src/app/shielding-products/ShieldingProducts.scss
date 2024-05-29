@@ -1,0 +1,16 @@
+.shielding-products {
+    background-color: #fff;
+
+    &__products {
+        padding: 8rem 5rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__products-container {
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        max-width: 130rem;
+    }
+}
