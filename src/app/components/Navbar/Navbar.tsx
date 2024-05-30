@@ -15,7 +15,9 @@ export default function Navbar() {
   const pathname = usePathname();
 
   function isActiveNavItem(path: string): boolean {
-    return pathname === path;
+    const link = pathname.split("/")[1];
+    if (!link) return pathname === path;
+    return `/${link}` == path;
   }
 
   function getActiveName(path: string): string {
