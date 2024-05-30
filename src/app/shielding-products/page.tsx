@@ -1,22 +1,15 @@
 import { Metadata } from "next"
-import { collection, getDocs, doc } from "firebase/firestore";
-import { db } from "../firebase/firebase";
 import ProductCard from "./ProductCard/ProductCard";
 import "./ShieldingProducts.scss";
+import getAllProducts from "../lib/getAllProducts";
 
 export const metadata: Metadata = {
   title: 'Shielding Products',
 }
 
-export default async function ShieldingProducts() {
+export default async function ShieldingProductsPage() {
 
-  const querySnapshot = await getDocs(collection(db, "products"));
-  let products: Product[] = [];
-  querySnapshot.forEach((doc) => {
-    let data = doc.data();
-    data['id'] = doc.id;
-    products.push(data as Product);
-  });
+  let products: Product[] = await getAllProducts();
   
   return (
     <main className="shielding-products">

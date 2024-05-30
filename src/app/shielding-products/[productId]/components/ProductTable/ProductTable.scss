@@ -1,0 +1,33 @@
+.product-table {
+    border: solid .1rem #ebecee;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 2rem;
+        
+    &__table-row {
+        &.gray-background {
+            background-color: #fafafa;
+        }
+
+        &.bold {
+            font-weight: bold;
+        }
+    }
+
+    &__table-item {
+        border: solid .1rem #ebecee;
+        padding: 1.4rem;
+
+        &.bold {
+            font-weight: bold;
+        }
+
+        &.center {
+            text-align: center;
+        }
+    }
+
+    &__table-list {
+        list-style: none;
+    }
+}
