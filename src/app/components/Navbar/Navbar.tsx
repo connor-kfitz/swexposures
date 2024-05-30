@@ -13,11 +13,12 @@ export default function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
 
   const pathname = usePathname();
+  const pathArray = pathname.split("/");
+  pathArray.splice(0, 1)
 
   function isActiveNavItem(path: string): boolean {
-    const link = pathname.split("/")[1];
-    if (!link) return pathname === path;
-    return `/${link}` == path;
+    if (!pathArray[0]) return pathname === path;
+    return `/${pathArray[0]}` === path;
   }
 
   function getActiveName(path: string): string {
@@ -58,10 +59,16 @@ export default function Navbar() {
         </ul>
       </div>}
       <div className="nav__lower">
-        {pathname.length > 1 && <div className="nav__lower-path">
-            <span className="nav__lower-text">Home</span> 
-            <span>{'>'}</span>
-            <span className="nav__lower-text-bold">{getActiveName(pathname)}</span>
+        {pathArray[0] && 
+          <div className="nav__lower-path">
+            <span className="nav__lower-text">Home</span>
+            {pathArray.map((section, index) => (
+              <div key={index}>
+                <span className="nav__lower-arrow">{'>'}</span>
+                <span className="nav__lower-text-bold">{index === 0 ? getActiveName(`/${section}`) : section}</span>
+              </div>
+            ))}
+
         </div>}
       </div>
     </nav>
