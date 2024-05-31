@@ -68,7 +68,6 @@ export default function Navbar() {
                 <span className="nav__lower-text-bold">{index === 0 ? getActiveName(`/${section}`) : section}</span>
               </div>
             ))}
-
         </div>}
       </div>
     </nav>

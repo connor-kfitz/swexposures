@@ -5,13 +5,13 @@ type NavItem = {
 
 type NewsArticle = {
     id: string,
-    image: string,
-    alt: string,
     title: string,
-    description: string,
     author: string,
-    date: string
-    tags: string[]
+    body: string,
+    createdAt: string,
+    datePublished: string,
+    tags: string[],
+    image: ProductImage
 }
 
 type Product = {
@@ -24,10 +24,14 @@ type Product = {
     videoURL: string,
     images: ProductImage[],
     table: any
-
 }
 
 type ProductImage = {
     path: string,
     src: string
+}
+
+type FirestoreTimestamp = {
+    seconds: number,
+    nanoseconds: number
 }
