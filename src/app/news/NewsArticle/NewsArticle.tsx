@@ -26,7 +26,7 @@ export default function NewsArticle({id, title, author, body, datePublished, ima
         <footer className="news-article__footer">
           <span className="news-article__author">
             by 
-            <Link className="news-article__author-link" href={"news/author?=" + author}>{author}</Link>
+            <Link className="news-article__author-link" href={"news/author/" + author}>{author}</Link>
           </span>
           <time>{datePublished}</time>
         </footer>
