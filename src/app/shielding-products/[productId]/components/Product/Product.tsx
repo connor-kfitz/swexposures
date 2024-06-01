@@ -1,5 +1,5 @@
-import ProductCarousel from "../ProductCarousel/ProductCarousel";
-import ProductTable from "../ProductTable/ProductTable";
+import ProductCarousel from "./components/ProductCarousel/ProductCarousel";
+import ProductTable from "./components/ProductTable/ProductTable";
 import "./Product.scss";
 
 type ProductProps = {

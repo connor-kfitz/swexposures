@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import Sirona from "../../../public/images/howToBuy/sironalogo.webp";
 import Gamma from "../../../public/images/howToBuy/gamma-gurus-logo.png";
-import "./HowToBuy.scss";
+import "./HowToBuyPage.scss";
 
-export default function HowToBuy() {
+export default function HowToBuyPage() {
   return (
     <main className="how-to-buy">
       <section className="how-to-buy__container">

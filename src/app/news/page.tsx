@@ -1,8 +1,8 @@
-import NewsArticle from "./NewsArticle/NewsArticle";
+import NewsArticle from "./components/NewsArticle/ArticlePreview";
 import getLatestArticles from "../lib/getLatestArticles";
-import "./News.scss";
+import "./NewsPage.scss";
 
-export default async function News() {
+export default async function NewsPage() {
 
   let newsArticles: NewsArticle[] = await getLatestArticles();
 

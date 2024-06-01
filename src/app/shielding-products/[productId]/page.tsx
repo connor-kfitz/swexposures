@@ -15,7 +15,7 @@ export async function generateMetadata({ params: { productId } }: Params): Promi
 
   if (!product) {
     return {
-      title: "User Not Found"
+      title: "Product not found"
     }  
   }
   

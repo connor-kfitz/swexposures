@@ -2,9 +2,9 @@ import Image from "next/image"
 import Contents from "../../../public/images/typaAPackage/swe-bag.webp";
 import Bag from "../../../public/images/typaAPackage/swe-booth.webp";
 import Thermometer from "../../../public/images/typaAPackage/cold.webp";
-import "./TypeAPackage.scss";
+import "./TypeAPackagePage.scss";
 
-export default function TypeAPackage() {
+export default function TypeAPackagePage() {
   return (
     <section className="type-a-package">
       <div className="type-a-package__content">

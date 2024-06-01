@@ -1,7 +1,7 @@
 import ContactForm from "./ContactForm/ContactForm";
-import "./Contact.scss";
+import "./ContactPage.scss";
 
-export default function Contact() {
+export default function ContactPage() {
   return (
     <main className="contact-page">
       <section className="contact-section">

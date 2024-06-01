@@ -1,7 +1,7 @@
 import { Metadata } from "next"
 import ProductCard from "./ProductCard/ProductCard";
-import "./ShieldingProducts.scss";
 import getAllProducts from "../lib/getAllProducts";
+import "./ShieldingProductsPage.scss";
 
 export const metadata: Metadata = {
   title: 'Shielding Products',

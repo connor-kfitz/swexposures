@@ -1,4 +1,4 @@
-import React from 'react'
+import "./TagPage.scss";
 
 export default function TagPage() {
   return (

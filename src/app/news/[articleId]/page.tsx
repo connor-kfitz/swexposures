@@ -4,7 +4,7 @@ import Link from "next/link";
 import getArticle from "@/app/lib/getArticle";
 import getLatestArticles from "@/app/lib/getLatestArticles";
 import { Metadata } from "next";
-import "./FullArticle.scss";
+import "./FullArticlePage.scss";
 
 type Params = {
   params: {
@@ -17,7 +17,7 @@ export async function generateMetadata({ params: { articleId } }: Params): Promi
 
   if (!article) {
     return {
-      title: "User Not Found"
+      title: "Article not found"
     }
   }
 
@@ -27,7 +27,7 @@ export async function generateMetadata({ params: { articleId } }: Params): Promi
   }
 }
 
-export default async function FullArticle({ params: { articleId } }: Params) {
+export default async function FullArticlePage({ params: { articleId } }: Params) {
 
   const article: NewsArticle | null = await getArticle(articleId);
 
