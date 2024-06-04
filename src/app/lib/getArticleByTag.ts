@@ -4,7 +4,7 @@ import { dateToDMonthY } from "../common/utils";
 
 export default async function getArticleByTag(tag: string): Promise<NewsArticle[]> {
     const articlesRef = collection(db, "articles");
-    const q = query(articlesRef, where("tags", "array-contains", tag), limit(3));
+    const q = query(articlesRef, where("tags", "array-contains", tag));
     const querySnapshot = await getDocs(q);
     let articles: NewsArticle[] = [];
     querySnapshot.forEach((doc) => {
