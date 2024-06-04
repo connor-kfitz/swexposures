@@ -1,5 +1,5 @@
 import Image from "next/image"
-import Profile from "../../../../public/images/companyFounder/founder-image.webp";
+import Profile from "@/../public/images/companyFounder/founder-image.webp";
 import "./CompanyFounder.scss";
 
 export default function CompanyFounder() {

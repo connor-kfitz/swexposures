@@ -1,0 +1,57 @@
+.article-search {
+
+    &__title-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fafafa;
+        padding: 3.2rem 0;
+    }
+
+    &__title {
+        width: 107rem;
+        max-width: 107rem;
+        color: #929394;
+        font-size: 4.5rem;
+    }
+
+    &__list-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        padding: 4rem 0;
+    }
+
+    &__list {
+        list-style-type: none;
+        max-width: 107rem;
+    }
+}
+
+.article {
+    border-bottom: solid .1rem #e0e1e3;
+    
+    &:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+    }
+
+    &__title-link {
+        color: #000;
+        text-decoration: none;
+        font-size: 2.8rem;
+    }
+
+    &__author {
+        font-size: 1.1rem;
+        color: #929394;
+    }
+
+    &__author-link {
+        color: inherit;
+    }
+}

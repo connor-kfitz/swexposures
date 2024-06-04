@@ -1,5 +1,5 @@
 import Image from "next/image";
-import History from "../../../../public/images/companyHistory/history-image.png";
+import History from "@/../public/images/companyHistory/history-image.png";
 import "./CompanyHistory.scss";
 
 export default function CompanyHistory() {

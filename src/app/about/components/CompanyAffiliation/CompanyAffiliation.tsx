@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import HealthHub from "../../../../public/images/companyAffiliation/health_innovation_hub_colourlogo.webp";
-import Nuclear from "../../../../public/images/companyAffiliation/cnic-logo.jpeg";
+import HealthHub from "@/../public/images/companyAffiliation/health_innovation_hub_colourlogo.webp";
+import Nuclear from "@/../public/images/companyAffiliation/cnic-logo.jpeg";
 import "./CompanyAffiliation.scss";
 
 export default function CompanyAffiliation() {

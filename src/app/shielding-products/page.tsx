@@ -1,5 +1,5 @@
 import { Metadata } from "next"
-import ProductCard from "./ProductCard/ProductCard";
+import ProductCard from "./components/ProductCard/ProductCard";
 import getAllProducts from "../lib/getAllProducts";
 import "./ShieldingProductsPage.scss";
 
