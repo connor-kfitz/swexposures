@@ -1,8 +1,8 @@
-import { collection, getDocs, query, where, limit } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../firebase/firebase";
 import { dateToDMonthY } from "../common/utils";
 
-export default async function getArticleByTag(tag: string): Promise<NewsArticle[]> {
+export default async function getArticlesByTag(tag: string): Promise<NewsArticle[]> {
     const articlesRef = collection(db, "articles");
     const q = query(articlesRef, where("tags", "array-contains", tag));
     const querySnapshot = await getDocs(q);

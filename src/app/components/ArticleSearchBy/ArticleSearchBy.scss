@@ -20,7 +20,7 @@
         justify-content: center;
         align-items: center;
         background-color: #fff;
-        padding: 4rem 0;
+        padding: 4rem 0 8rem;
     }
 
     &__list {
@@ -31,9 +31,10 @@
 
 .article {
     border-bottom: solid .1rem #e0e1e3;
-    
+    padding-bottom: 4rem;
+
     &:not(:last-child) {
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
     }
 
     &__title {
@@ -44,14 +45,40 @@
         color: #000;
         text-decoration: none;
         font-size: 2.8rem;
+
+        &:visited {
+            color: #000;
+        }
+
+        &:hover {
+            color: #7a6c00;
+        }
     }
 
     &__author {
         font-size: 1.1rem;
         color: #929394;
+        margin-bottom: 4rem;
     }
 
     &__author-link {
         color: inherit;
+    }
+
+    p {
+        margin-bottom: 3.2rem;
+        font-size: 1.4rem;
+        color: #5a5b5c;
+    }
+
+    ul {
+        padding-left: 2rem;
+        margin-bottom: 3.2rem;
+        font-size: 1.4rem;
+        color: #5a5b5c;
+    }
+
+    a {
+        color: #7a6c00;
     }
 }

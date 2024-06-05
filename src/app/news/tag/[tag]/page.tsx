@@ -1,5 +1,5 @@
 import ArticleSearchBy from "@/app/components/ArticleSearchBy/ArticleSearchBy";
-import getArticleByTag from "@/app/lib/getArticleByTag";
+import getArticlesByTag from "@/app/lib/getArticlesByTag";
 import { Metadata } from "next";
 import "./TagPage.scss";
 
@@ -18,7 +18,7 @@ export async function generateMetadata({ params: { tag } }: Params): Promise<Met
 
 export default async function TagPage({ params: { tag } }: Params) {
 
-  const articles = await getArticleByTag(tag);
+  const articles = await getArticlesByTag(tag);
 
   return (
     <main>

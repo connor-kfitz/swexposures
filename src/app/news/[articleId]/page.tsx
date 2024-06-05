@@ -45,7 +45,7 @@ export default async function FullArticlePage({ params: { articleId } }: Params)
                 Tagged:
               </div>
               {article.tags?.map((tag, index) => (
-                <Link className="full-article__tag" href={`/news/tag/${tag.toLowerCase()}`} key={index}>{tag}</Link>
+                <Link className="full-article__tag" href={`/news/tag/${tag.toLowerCase().replace(/ /g, "-")}`} key={index}>{tag}</Link>
               ))}
             </div>
           </div>
