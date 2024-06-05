@@ -9,11 +9,11 @@ type ProductProps = {
   images: ProductImage[],
   features: string[],
   specifications: string[],
-  table: any
+  table: any,
+  videoId: string
 }
 
-export default function Product({name, model, description, images, features, specifications, table}: ProductProps ) {
-
+export default function Product({name, model, description, images, features, specifications, table, videoId}: ProductProps ) {
   return (
     <section className="product">
       <div className="product__content">
@@ -38,6 +38,8 @@ export default function Product({name, model, description, images, features, spe
               <li className="product-features__text-item" key={index}>{feature}</li>
             ))}
           </ul>
+          <h2 className="product-features__video-title">Watch Hands On User Experience</h2>
+          <iframe className="product-features__video" src={`https://www.youtube.com/embed/${videoId}`}></iframe>
         </div>
       </div>
     </section>

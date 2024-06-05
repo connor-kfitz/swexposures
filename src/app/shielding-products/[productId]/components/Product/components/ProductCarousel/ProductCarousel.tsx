@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import Arrow from "../../../../../../public/images/products/right-arrow.svg";
+import Arrow from "../../../../../../../../public/images/products/right-arrow.svg";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useState } from "react";
 import "./ProductCarousel.scss";

@@ -27,15 +27,21 @@ export async function generateMetadata({ params: { productId } }: Params): Promi
 
 export default async function ProductPage({ params: { productId } }: Params) {
 
+  function youtubeURLId(url: string): string {
+    var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+    var match = url.match(regExp);
+    return (match && match[7].length == 11) ? match[7] : '';
+  }
+  
   const product: Product | null = await getProduct(productId);
-
   if (!product) notFound();
+  const videoId = youtubeURLId(product.videoURL);
 
   return (
     <main>
       <Product 
         name={product.name} model={product.model} description={product.description} images={product.images}
-        features={product.features} specifications={product.specifications} table={product.table}
+        features={product.features} specifications={product.specifications} table={product.table} videoId={videoId}
       />
     </main>
   )
