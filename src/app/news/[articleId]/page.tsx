@@ -3,6 +3,7 @@ import Tag from "../../../../public/images/news/tag-icon.svg";
 import Link from "next/link";
 import getArticle from "@/app/lib/getArticle";
 import getLatestArticles from "@/app/lib/getLatestArticles";
+import Markdown from "react-markdown";
 import { Metadata } from "next";
 import "./FullArticlePage.scss";
 
@@ -36,6 +37,7 @@ export default async function FullArticlePage({ params: { articleId } }: Params)
         <section className="full-article__container">
           <img className="full-article__image" src={article.image.src} alt=""/>
           <h1 className="full-article__header">{article.title}</h1>
+          <Markdown>{article.body}</Markdown>
           <div className="full-article__info-container">
             <div className="full-article__tags-container">
               <div className="full-article__tag-label">
