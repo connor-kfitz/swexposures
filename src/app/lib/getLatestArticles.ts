@@ -10,8 +10,8 @@ export default async function getLatestArticles(amount: number): Promise<NewsArt
     querySnapshot.forEach((doc) => {
         let data = doc.data();
         data['id'] = doc.id;
-        data['datePublished'] = dateToDMonthY(new Date(doc.data().datePublished * 1000))
-        data['createdAt'] = dateToDMonthY(new Date(doc.data().createdAt * 1000))
+        data['datePublished'] = dateToDMonthY(doc.data().datePublished.toDate())
+        data['createdAt'] = dateToDMonthY(doc.data().createdAt.toDate())
         articles.push(data as NewsArticle);
     });
     return articles;

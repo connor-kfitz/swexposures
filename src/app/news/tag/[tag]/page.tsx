@@ -18,6 +18,7 @@ export async function generateMetadata({ params: { tag } }: Params): Promise<Met
 
 export default async function TagPage({ params: { tag } }: Params) {
 
+  tag = tag.replace(/-/g, ' ');
   const articles = await getArticlesByTag(tag);
 
   return (
