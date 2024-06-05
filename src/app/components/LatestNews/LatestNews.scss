@@ -53,6 +53,10 @@
         font-size: 1.4rem;
         color: #5a5b5c;
         margin-bottom: 3rem;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
     }
 
     &__article-read-more {

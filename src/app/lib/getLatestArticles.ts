@@ -2,9 +2,9 @@ import { collection, getDocs, query, orderBy, limit } from "firebase/firestore";
 import { db } from "../firebase/firebase";
 import { dateToDMonthY } from "../common/utils";
 
-export default async function getLatestArticles(): Promise<NewsArticle[]> {
+export default async function getLatestArticles(amount: number): Promise<NewsArticle[]> {
     const articlesRef = collection(db, "articles");
-    const q = query(articlesRef, orderBy("createdAt", "desc"), limit(3));
+    const q = query(articlesRef, orderBy("createdAt", "desc"), limit(amount));
     const querySnapshot = await getDocs(q);
     let articles: NewsArticle[] = [];
     querySnapshot.forEach((doc) => {

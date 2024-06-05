@@ -55,7 +55,7 @@ export default async function FullArticlePage({ params: { articleId } }: Params)
   }
 
 export async function generateStaticParams() {
-  let articles: NewsArticle[] = await getLatestArticles();
+  let articles: NewsArticle[] = await getLatestArticles(10);
   return articles.map(article => ({
     articleId: article.id
   }))

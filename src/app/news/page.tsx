@@ -4,7 +4,7 @@ import "./NewsPage.scss";
 
 export default async function NewsPage() {
 
-  let newsArticles: NewsArticle[] = await getLatestArticles();
+  let newsArticles: NewsArticle[] = await getLatestArticles(10);
 
   return (
     <main className="news-page">
