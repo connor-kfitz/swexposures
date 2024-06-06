@@ -3,15 +3,17 @@ import { getFirestore } from "@firebase/firestore";
 import { getAuth } from 'firebase/auth';
 import { getStorage } from "firebase/storage";
 
+const developEnvironment = process.env.NODE_ENV === "development";
+
 const firebaseConfig = {
-    apiKey: "AIzaSyBBIwb-9C3dtXvBJop__fSo8rSiIy4bqi0",
-    authDomain: "swexposures-14cb3.firebaseapp.com",
-    projectId: "swexposures-14cb3",
-    storageBucket: "swexposures-14cb3.appspot.com",
-    messagingSenderId: "36352396137",
-    appId: "1:36352396137:web:d37ff8dbdde72f37a68bf8",
-    measurementId: "G-JPKF85TCY1"
-};
+    apiKey: developEnvironment ? process.env.developFirebaseApiKey : process.env.productionFirebaseAPIKey,
+    authDomain: developEnvironment ? process.env.developFirebaseAuthDomain : process.env.productionFirebaseAuthDomain,
+    projectId: developEnvironment ? process.env.developFirebaseProjectId : process.env.productionFirebaseProjectId,
+    storageBucket: developEnvironment ? process.env.developFirebaseStorageBucket : process.env.productionFirebaseStorageBucket,
+    messagingSenderId: developEnvironment ? process.env.developFirebaseMessagingSenderId : process.env.productionFirebaseMessagingSenderId,
+    appId: developEnvironment ? process.env.developFirebaseAppId : process.env.productionFirebaseAppId,
+    measurementId: developEnvironment ? process.env.developFirebaseMeasurementIdb : process.env.productionFirebaseMeasurementId
+}
 
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
