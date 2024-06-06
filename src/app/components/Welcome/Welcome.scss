@@ -1,10 +1,16 @@
+$breakpoint-one: 800px; 
+
 .welcome {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 15rem 0;
+    padding: 15rem 2rem;
+
+    @media (max-width: $breakpoint-one) {
+            padding: 10rem 1rem;
+    }
 
     &:before {
         content: "";
@@ -29,6 +35,10 @@
         font-size: 4.2rem;
         margin-bottom: 6rem;
         text-align: center;
+
+        @media (max-width: $breakpoint-one) {
+            font-size: 3rem;
+        }
     }
 
     &__content-list {
@@ -38,6 +48,10 @@
 
     &__list-item {
         font-size: 2rem;
+
+        @media (max-width: $breakpoint-one) {
+            font-size: 1.6rem;
+        }
     }
 
     &__about-link {
