@@ -3,7 +3,7 @@ import Image from "next/image";
 import Logo from "../../../../public/images/swe-logo.png";
 import Menu from "../../../../public/images/menu-icon.png";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { navItems } from "@/app/common/constants";
 import "./Navbar.scss";
@@ -11,6 +11,18 @@ import "./Navbar.scss";
 export default function Navbar() {
 
   const [mobileMenu, setMobileMenu] = useState(false);
+  const [fixedNav, setFixedNav] = useState(false);
+
+  const navContainer = useRef<HTMLDivElement>(null); 
+  
+  useEffect(() => {
+    document.addEventListener("scroll", (event) => {
+      if (!navContainer.current) return
+      var scrollTop = (document.documentElement || document.body.parentNode || document.body).scrollTop;
+      if (scrollTop > navContainer.current.offsetTop) { setFixedNav(true) }
+      else { setFixedNav(false) }
+    });
+  })
 
   const pathname = usePathname();
   const pathArray = pathname.split("/");
@@ -31,9 +43,10 @@ export default function Navbar() {
   }
 
   return (
+    <>
     <nav className="nav">
       <div className="nav__upper"></div>
-      <div className="nav__container">
+      <div className="nav__container" ref={navContainer}>
         <Link className="nav__logo-link" href="/">
             <Image className="nav__logo" src={Logo} alt="South West Exposures Logo"/>
           <img className="nav__logo"/>
@@ -71,5 +84,24 @@ export default function Navbar() {
         </div>}
       </div>
     </nav>
+    {fixedNav && <nav className="fixed-nav">
+      <div className="fixed-nav__container">
+        <Link className="fixed-nav__logo-link" href="/">
+          <Image className="fixed-nav__logo" src={Logo} alt="South West Exposures Logo" />
+          <img className="fixed-nav__logo" />
+        </Link>
+        <ul className="fixed-nav__link-container">
+          {navItems.map((item, index) => (
+            <li className="fixed-nav__link-item" key={index}>
+              <Link className={isActiveNavItem(item.path) ? "nav__link active" : "nav__link"} href={item.path}>{item.name}</Link>
+            </li>
+          ))}
+        </ul>
+        <button className="fixed-nav__mobile-menu-button" onClick={() => toggleMobileMenu()}>
+          <Image className="fixed-nav__mobile-menu-icon" src={Menu} alt="Mobile Menu Icon" />
+        </button>
+      </div>
+    </nav>}
+    </>
   )
 }
