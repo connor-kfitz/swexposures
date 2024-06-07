@@ -1,3 +1,6 @@
+$breakpoint-one: 800px;
+$breakpoint-two: 550px;
+
 .how-to-buy {
     background-color: #fff;
     color: #5a5b5c;
@@ -6,18 +9,36 @@
     align-items: center;
     padding: 5rem 5rem 10rem;
 
+    @media (max-width: $breakpoint-one) {
+        padding: 5rem 1.5rem 10rem;
+    }
+
     &__container {
         max-width: 120rem;
     }
 
     &__header {
-        font-size: 4.6rem;
+        font-size: 4.2rem;
         margin-bottom: 3rem;
+
+        @media (max-width: $breakpoint-one) {
+            font-size: 3rem;
+            text-align: center;
+        }
     }
 
     &__text {
         font-size: 3.4rem;
         margin-bottom: 14rem;
+
+        @media (max-width: $breakpoint-one) {
+            font-size: 2.5rem;
+            margin-bottom: 12rem;
+        }
+
+        @media (max-width: $breakpoint-two) {
+            margin-bottom: 8rem;
+        }
     }
 
     &__link-container {
@@ -25,17 +46,31 @@
         justify-content: space-around;
         list-style: none;
         margin-bottom: 12rem;
+
+        @media (max-width: $breakpoint-two) {
+            flex-direction: column;
+        }
     }
 
     &__link-item {
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        @media (max-width: $breakpoint-two) {
+            &:not(:last-child) {
+                margin-bottom: 6rem;
+            }
+        }
     }
 
     &__link-header {
         font-size: 2.3rem;
         margin-bottom: 2rem;
+
+        @media (max-width: $breakpoint-one) {
+            font-size: 1.7rem;
+        }
     }
 
     &__link {
@@ -53,6 +88,7 @@
     }
 
     &__link-image {
+        width: 100%;
         max-width: 37.1rem;
         height: auto;
         margin-bottom: 2.5rem;
@@ -61,6 +97,10 @@
     &__contact-text {
         font-size: 2rem;
         text-align: center;
+
+        @media (max-width: $breakpoint-one) {
+            font-size: 1.5rem;
+        }
     }
 
     &__contact-link {
