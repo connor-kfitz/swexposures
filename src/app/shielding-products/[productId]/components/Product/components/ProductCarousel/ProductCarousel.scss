@@ -1,7 +1,14 @@
+@import "../../Product.scss";
+
 .embla {
     overflow: hidden;
     position: relative;
     margin-bottom: 2rem;
+
+    @media (max-width: $breakpoint-two) {
+        margin: 0 auto 6rem auto;
+        width: 95%;
+    }
 
     &__arrow-button {
         position: absolute;

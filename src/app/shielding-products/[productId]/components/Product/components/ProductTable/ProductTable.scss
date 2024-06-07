@@ -1,8 +1,18 @@
+@import "../../Product.scss";
+
 .product-table {
     border: solid .1rem #ebecee;
     border-collapse: collapse;
     width: 100%;
     margin-bottom: 2rem;
+
+    @media (max-width: $breakpoint-two) {
+        margin-bottom: 6rem;
+    }
+
+    @media (max-width: $breakpoint-three) {
+        font-size: 1.5rem;
+    }
         
     &__table-row {
         &.gray-background {

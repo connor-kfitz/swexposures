@@ -26,6 +26,10 @@ export default function Product({name, model, description, images, features, spe
             ))}
           </ul>
           <ProductTable table={table}/>
+          <div className="product-features__video-container-two">
+            <h2 className="product-features__video-title">Watch Hands On User Experience</h2>
+            <iframe className="product-features__video" src={`https://www.youtube.com/embed/${videoId}`}></iframe>
+          </div>
         </div>
         <div className="product-features">
           <h2 className="product-features__sub-header">{model}</h2>
@@ -38,8 +42,10 @@ export default function Product({name, model, description, images, features, spe
               <li className="product-features__text-item" key={index}>{feature}</li>
             ))}
           </ul>
-          <h2 className="product-features__video-title">Watch Hands On User Experience</h2>
-          <iframe className="product-features__video" src={`https://www.youtube.com/embed/${videoId}`}></iframe>
+          <div className="product-features__video-container-one">
+            <h2 className="product-features__video-title">Watch Hands On User Experience</h2>
+            <iframe className="product-features__video" src={`https://www.youtube.com/embed/${videoId}`}></iframe>
+          </div>
         </div>
       </div>
     </section>
