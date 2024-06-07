@@ -1,3 +1,5 @@
+$breakpoint-one: 800px;
+
 .testimonials {
     display: flex;
     flex-direction: column;
@@ -7,9 +9,17 @@
     color: #5a5b5c;
     padding: 6rem;
 
+    @media (max-width: $breakpoint-one) {
+        padding: 6rem 1.5rem;
+    }
+
     &__header {
-        font-size: 4.7rem;
+        font-size: 4.2rem;
         margin-bottom: 6rem;
+
+        @media (max-width: $breakpoint-one) {
+            font-size: 3rem;
+        }
     }
 
     &__quote-container {
@@ -18,15 +28,23 @@
         border: solid .4rem #5a5b5c;
         border-right: none;
         border-left: none;
+
+        @media (max-width: $breakpoint-one) {
+            border-width: .3rem;
+        }
     }
 
     &__text {
         font-style: italic;
         text-align: center;
-        font-size: 2.9rem;
+        font-size: 2.6rem;
 
         &:not(:first-child) {
             margin-top: 3rem;
+        }
+
+        @media (max-width: $breakpoint-one) {
+            font-size: 1.9rem;
         }
     }
 
