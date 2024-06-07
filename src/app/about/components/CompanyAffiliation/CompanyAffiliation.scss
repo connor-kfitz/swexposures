@@ -1,3 +1,7 @@
+$breakpoint-one: 1100px;
+$breakpoint-two: 800px;
+$breakpoint-three: 550px;
+
 .company-affiliation {
     background-color: #fff;
     color: #5a5b5c;
@@ -11,24 +15,37 @@
     }
 
     &__header {
-        font-size: 4.6rem;
+        font-size: 4.2rem;
         text-align: center;
         margin-bottom: 10rem;
+
+        @media (max-width: $breakpoint-two) {
+            font-size: 3rem;
+        }
     }
 
     &__content {
         display: flex;
         list-style: none;
+
+        @media (max-width: $breakpoint-one) {
+            flex-direction: column;
+        }
     }
 
     &__item {
-        flex: 1 1 50%;
+        flex: 0 1 50%;
         display: flex;
         flex-direction: column;
         align-items: center;
 
         &:not(:last-child) {
             margin-right: 8rem;
+
+            @media (max-width: $breakpoint-one) {
+                margin-right: 0rem;
+                margin-bottom: 4rem;
+            }
         }
     }
 
@@ -36,17 +53,36 @@
         width: auto;
         height: 20.5rem;
         margin-bottom: 4rem;
+
+        @media (max-width: $breakpoint-two) {
+            height: 15rem;
+        }
+
+        @media (max-width: $breakpoint-three) {
+            max-width: 90%;
+            height: auto;
+            max-height: 15rem;
+        }
     }
 
     &__text {
-        font-size: 3rem;
+        font-size: 2.5rem;
         text-align: center;
         line-height: 1.7;
         margin-bottom: 4rem;
+
+        @media (max-width: $breakpoint-two) {
+            font-size: 1.8rem;
+        }
     }
 
     &__link-text {
         font-size: 2rem;
+        text-align: center;
+
+        @media (max-width: $breakpoint-two) {
+                font-size: 1.5rem;
+        }
     }
 
     &__link {
