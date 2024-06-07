@@ -1,7 +1,13 @@
+$breakpoint-one: 800px;
+
 .company-founder {
     background-color: #f2f2f2;
     color: #5a5b5c;
     padding: 5rem;
+
+    @media (max-width: $breakpoint-one) {
+        padding: 5rem 1.5rem;
+    }
 
     &__container {
         display: flex;
@@ -11,8 +17,13 @@
     }
 
     &__header {
-        font-size: 4.6rem;
+        font-size: 4.2rem;
         margin-bottom: 8rem;
+
+        @media (max-width: $breakpoint-one) {
+            font-size: 3rem;
+            margin-bottom: 5rem;
+        }
     }
 
     &__profile-image {
@@ -25,14 +36,26 @@
         font-size: 2.8rem;
         font-weight: normal;
         font-style: italic;
+
+        @media (max-width: $breakpoint-one) {
+            font-size: 2.1rem;
+        }
     }
 
     &__position {
         font-size: 2.3rem;
         font-style: italic;
+
+        @media (max-width: $breakpoint-one) {
+            font-size: 1.7rem;
+        }
     }
 
     &__text {
         font-size: 2rem;
+
+        @media (max-width: $breakpoint-one) {
+            font-size: 1.5rem;
+        }
     }
 }
