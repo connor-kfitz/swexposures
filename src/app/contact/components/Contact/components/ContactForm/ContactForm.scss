@@ -1,8 +1,14 @@
+@import "../../Contact.scss";
+
 .contact-form {
     &__row {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @media (max-width: $breakpoint-two) {
+            flex-direction: column;
+        }
     }
 
     &__item {
@@ -11,6 +17,10 @@
 
         &.name {
             margin-right: 2rem;
+
+            @media (max-width: $breakpoint-two) {
+                margin-right: 0;
+            }
         }
     }
 

@@ -1,10 +1,17 @@
-.contact-section {
+$breakpoint-one: 800px;
+$breakpoint-two: 650px;
+
+.contact {
     color: #5a5b5c;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #fff;
     padding: 4rem;
+
+    @media (max-width: $breakpoint-one) {
+        padding: 4rem 1.5rem;
+    }
 
     &__container {
         width: 107rem;
@@ -19,5 +26,9 @@
     &__header {
         font-size: 3.9rem;
         margin-bottom: 1rem;
+
+        @media (max-width: $breakpoint-one) {
+            font-size: 3rem;
+        }
     }
 }
