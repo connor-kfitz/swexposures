@@ -1,7 +1,6 @@
 import ArticleSearchBy from "@/app/components/ArticleSearchBy/ArticleSearchBy";
 import getArticleByAuthor from "@/app/lib/getArticleByAuthor";
 import { Metadata } from "next";
-import "./AuthorPage.scss";
 
 type Params = {
   params: {
@@ -18,6 +17,7 @@ export async function generateMetadata({ params: { author } }: Params): Promise<
 
 export default async function AuthorPage({ params: { author } }: Params) {
 
+  author = author.replace(/-/g, ' ');
   const articles = await getArticleByAuthor(author);
 
   return (

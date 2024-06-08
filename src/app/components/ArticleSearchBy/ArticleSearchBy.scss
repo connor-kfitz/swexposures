@@ -1,26 +1,40 @@
+$breakpoint-one: 800px;
+
 .article-search {
+    background-color: #fff;
 
     &__title-container {
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: #fafafa;
-        padding: 3.2rem 0;
+        padding: 3.2rem 5rem;
+
+        @media (max-width: $breakpoint-one) {
+            padding: 3.2rem 1.5rem;
+        }
     }
 
     &__title {
         width: 107rem;
         max-width: 107rem;
         color: #929394;
-        font-size: 4.5rem;
+        font-size: 4.2rem;
+
+        @media (max-width: $breakpoint-one) {
+            font-size: 3rem;
+        }
     }
 
     &__list-container {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #fff;
-        padding: 4rem 0 8rem;
+        padding: 4rem 5rem 8rem;
+
+        @media (max-width: $breakpoint-one) {
+            padding: 4rem 1.5rem 8rem;
+        }
     }
 
     &__list {
@@ -39,12 +53,17 @@
 
     &__title {
         margin-bottom: 1rem;
+        line-height: 1.2;
     }
 
     &__title-link {
         color: #000;
         text-decoration: none;
         font-size: 2.8rem;
+
+        @media (max-width: $breakpoint-one) {
+            font-size: 2rem;
+        }
 
         &:visited {
             color: #000;
@@ -64,7 +83,9 @@
     &__author-link {
         color: inherit;
     }
+}
 
+.markdown {
     p {
         margin-bottom: 3.2rem;
         font-size: 1.4rem;

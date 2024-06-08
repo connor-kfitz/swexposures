@@ -1,7 +1,6 @@
 import ArticleSearchBy from "@/app/components/ArticleSearchBy/ArticleSearchBy";
 import getArticlesByTag from "@/app/lib/getArticlesByTag";
 import { Metadata } from "next";
-import "./TagPage.scss";
 
 type Params = {
   params: {

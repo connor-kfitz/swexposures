@@ -8,13 +8,6 @@ type ArticleSearchByProps = {
   articles: NewsArticle[]
 }
 
-type ArticleProps = {
-  title: string,
-  author: string,
-  body: string,
-  id: string
-}
-
 export default function ArticleSearchBy({ searchType, searchValue, articles }: ArticleSearchByProps) {
   return (
     <section className="article-search">
@@ -34,6 +27,13 @@ export default function ArticleSearchBy({ searchType, searchValue, articles }: A
   )
 }
 
+type ArticleProps = {
+  title: string,
+  author: string,
+  body: string,
+  id: string
+}
+
 function Article({ title, author, body, id }: ArticleProps) {
   return (
     <li className="article">
@@ -43,7 +43,7 @@ function Article({ title, author, body, id }: ArticleProps) {
           <div className="article__author">Posted By <Link className="article__author-link" href={`/news/author/${author}`}>{author}</Link></div>
         </header>
         <div className="article__content-container">
-          <Markdown>{body}</Markdown>
+          <Markdown className="markdown">{body}</Markdown>
         </div>
       </article>
     </li>
