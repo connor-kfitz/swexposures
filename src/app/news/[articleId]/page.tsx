@@ -1,11 +1,8 @@
-import Image from "next/image";
-import Tag from "../../../../public/images/news/tag-icon.svg";
-import Link from "next/link";
+
 import getArticle from "@/app/lib/getArticle";
 import getLatestArticles from "@/app/lib/getLatestArticles";
-import Markdown from "react-markdown";
+import Article from "./components/Article/Article";
 import { Metadata } from "next";
-import "./FullArticlePage.scss";
 
 type Params = {
   params: {
@@ -34,22 +31,7 @@ export default async function FullArticlePage({ params: { articleId } }: Params)
 
     if (article) return (
       <main className="full-article">
-        <section className="full-article__container">
-          <img className="full-article__image" src={article.image.src} alt=""/>
-          <h1 className="full-article__header">{article.title}</h1>
-          <Markdown>{article.body}</Markdown>
-          <div className="full-article__info-container">
-            <div className="full-article__tags-container">
-              <div className="full-article__tag-label">
-                <Image className="full-article__tag-icon" src={Tag} alt="Tag Icon"/>
-                Tagged:
-              </div>
-              {article.tags?.map((tag, index) => (
-                <Link className="full-article__tag" href={`/news/tag/${tag.toLowerCase().replace(/ /g, "-")}`} key={index}>{tag}</Link>
-              ))}
-            </div>
-          </div>
-        </section>
+        <Article image={article.image.src} title={article.title} body={article.body} tags={article.tags}/>
       </main>
     )
   }
