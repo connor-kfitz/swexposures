@@ -47,7 +47,7 @@ export default function Navbar() {
     <>
     <nav className="nav">
       <div className="nav__upper"></div>
-      <div className="nav__container" ref={navContainer}>
+      <div className="nav__container" ref={navContainer} style={{"opacity" : fixedNav ? "0" : "1"}}>
         <Link className="nav__logo-link" href="/">
             <Image className="nav__logo" src={Logo} alt="South West Exposures Logo"/>
           <img className="nav__logo"/>
