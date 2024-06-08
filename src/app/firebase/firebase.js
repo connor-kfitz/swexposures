@@ -6,13 +6,13 @@ import { getStorage } from "firebase/storage";
 const developEnvironment = process.env.NODE_ENV === "development";
 
 const firebaseConfig = {
-    apiKey: developEnvironment ? process.env.developFirebaseApiKey : process.env.productionFirebaseAPIKey,
-    authDomain: developEnvironment ? process.env.developFirebaseAuthDomain : process.env.productionFirebaseAuthDomain,
-    projectId: developEnvironment ? process.env.developFirebaseProjectId : process.env.productionFirebaseProjectId,
-    storageBucket: developEnvironment ? process.env.developFirebaseStorageBucket : process.env.productionFirebaseStorageBucket,
-    messagingSenderId: developEnvironment ? process.env.developFirebaseMessagingSenderId : process.env.productionFirebaseMessagingSenderId,
-    appId: developEnvironment ? process.env.developFirebaseAppId : process.env.productionFirebaseAppId,
-    measurementId: developEnvironment ? process.env.developFirebaseMeasurementIdb : process.env.productionFirebaseMeasurementId
+    apiKey: developEnvironment ? process.env.NEXT_PUBLIC_DEVELOP_FB_API_KEY : process.env.NEXT_PUBLIC_PRODUCTION_FB_API_KEY,
+    authDomain: developEnvironment ? process.env.NEXT_PUBLIC_DEVELOP_FB_AUTH_DOMAIN : process.env.NEXT_PUBLIC_PRODUCTION_FB_AUTH_DOMAIN,
+    projectId: developEnvironment ? process.env.NEXT_PUBLIC_DEVELOP_FB_PROJECT_ID : process.env.NEXT_PUBLIC_PRODUCTION_FB_PROJECT_ID,
+    storageBucket: developEnvironment ? process.env.NEXT_PUBLIC_DEVELOP_FB_STORAGE_BUCKET : process.env.NEXT_PUBLIC_PRODUCTION_FB_STORAGE_BUCKET,
+    messagingSenderId: developEnvironment ? process.env.NEXT_PUBLIC_DEVELOP_FB_MS_ID : process.env.NEXT_PUBLIC_PRODUCTION_FB_MS_ID,
+    appId: developEnvironment ? process.env.NEXT_PUBLIC_DEVELOP_FB_APP_ID : process.env.NEXT_PUBLIC_PRODUCTION_FB_APP_ID,
+    measurementId: developEnvironment ? process.env.NEXT_PUBLIC_DEVELOP_FB_MEASUREMENT_ID : process.env.NEXT_PUBLIC_PRODUCTION_FB_MEASUREMENT_ID
 }
 
 const app = initializeApp(firebaseConfig);
