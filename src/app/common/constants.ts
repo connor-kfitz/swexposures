@@ -11,10 +11,10 @@ export const navItems: NavItem[] = [
         name: 'Shielding Products',
         path: '/shielding-products'
     },
-    {
-        name: 'Type A Package',
-        path: '/type-a-package'
-    },
+    // {
+    //     name: 'Type A Package',
+    //     path: '/type-a-package'
+    // },
     {
         name: 'How To Buy',
         path: '/how-to-buy'
