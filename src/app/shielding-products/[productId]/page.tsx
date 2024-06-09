@@ -10,6 +10,8 @@ type Params = {
   }
 }
 
+export const revalidate = 60;
+
 export async function generateMetadata({ params: { productId } }: Params): Promise<Metadata> {
   const product: Product | null = await getProduct(productId);
 
