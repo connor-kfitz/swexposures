@@ -13,7 +13,11 @@ export default function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [fixedNav, setFixedNav] = useState(false);
 
-  const navContainer = useRef<HTMLDivElement>(null); 
+  const navContainer = useRef<HTMLDivElement>(null);
+
+  const pathname = usePathname();
+  const pathArray = pathname.split("/");
+  pathArray.splice(0, 1);
   
   useEffect(() => {
     document.addEventListener("scroll", (event) => {
@@ -24,9 +28,9 @@ export default function Navbar() {
     });
   })
 
-  const pathname = usePathname();
-  const pathArray = pathname.split("/");
-  pathArray.splice(0, 1)
+  useEffect(() => {
+    setMobileMenu(false);
+  }, [pathname]);
 
   function isActiveNavItem(path: string): boolean {
     if (!pathArray[0]) return pathname === path;
