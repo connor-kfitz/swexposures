@@ -39,7 +39,11 @@ export default function Navbar() {
   }
 
   function toggleMobileMenu(): void {
-    if ((document.documentElement || document.body.parentNode || document.body).scrollTop !== 0) document.body.scrollTop = document.documentElement.scrollTop = 0;
+    if ((document.documentElement || document.body.parentNode || document.body).scrollTop !== 0) {
+      document.body.scrollTop = document.documentElement.scrollTop = 0;
+      setMobileMenu(true);
+      return;
+    }
     setMobileMenu((previous) => !previous);
   }
 
