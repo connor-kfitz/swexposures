@@ -11,7 +11,7 @@ export default function Footer() {
       <ScrollButton />
       <div className="footer__upper">
         <div className="footer__upper-container">
-          <Image className="footer__logo" src={Logo} alt="South West Exposures Logo"/>
+          <Image className="footer__logo" src={Logo} alt="South West Exposures Company Logo"/>
         </div>
       </div>
       <div className="footer__lower">

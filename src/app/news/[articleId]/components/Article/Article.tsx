@@ -21,7 +21,7 @@ export default function Article({ image, title, body, tags }: ArticleProps) {
         <div className="article__info-container">
           <div className="article__tags-container">
             <div className="article__tag-label">
-              <Image className="article__tag-icon" src={TagIcon} alt="Tag Icon" />
+              <Image className="article__tag-icon" src={TagIcon} alt="Tag Icon"/>
               Tagged:
             </div>
             <ul className="article__tag-container">

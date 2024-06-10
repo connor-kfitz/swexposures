@@ -57,8 +57,7 @@ export default function Navbar() {
       <div className="nav__upper"></div>
       <div className="nav__container" ref={navContainer} style={{"opacity" : fixedNav ? "0" : "1"}}>
         <Link className="nav__logo-link" href="/">
-            <Image className="nav__logo" src={Logo} alt="South West Exposures Logo"/>
-          <img className="nav__logo"/>
+          <Image className="nav__logo" src={Logo} alt="South West Exposures Company Logo"/>
         </Link>
         <ul className="nav__link-container">
           {navItems.map((item, index) => (
@@ -96,8 +95,7 @@ export default function Navbar() {
     {fixedNav && <nav className="fixed-nav">
       <div className="fixed-nav__container">
         <Link className="fixed-nav__logo-link" href="/">
-          <Image className="fixed-nav__logo" src={Logo} alt="South West Exposures Logo" />
-          <img className="fixed-nav__logo" />
+          <Image className="fixed-nav__logo" src={Logo} alt="South West Exposures Company Logo"/>
         </Link>
         <ul className="fixed-nav__link-container">
           {navItems.map((item, index) => (
@@ -107,7 +105,7 @@ export default function Navbar() {
           ))}
         </ul>
         <button className="fixed-nav__mobile-menu-button" onClick={() => toggleMobileMenu()}>
-          <Image className="fixed-nav__mobile-menu-icon" src={Menu} alt="Mobile Menu Icon" />
+          <Image className="fixed-nav__mobile-menu-icon" src={Menu} alt="Mobile Menu Icon"/>
         </button>
       </div>
     </nav>}

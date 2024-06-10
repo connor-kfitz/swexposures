@@ -39,7 +39,7 @@ function NewsArticle({ id, title, author, body, datePublished, image }: NewsArti
     <li className="news-article">
       <article className="news-article__container">
         <Link className="news-article__image-container" href={"/news/" + id}>
-          <img className="news-article__image" src={image} alt="" />
+          <img className="news-article__image" src={image} alt="Article Header"/>
         </Link>
         <div className="news-article__content">
           <Link className="news-article__link" href={"/news/" + id}>

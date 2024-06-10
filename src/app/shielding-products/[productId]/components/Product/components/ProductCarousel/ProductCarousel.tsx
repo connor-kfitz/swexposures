@@ -26,7 +26,7 @@ export default function ProductCarousel({images}: ProductCarouselProps) {
       <div className="embla__container">
         {images.map((image, index) => (
           <div className="embla__slide" key={index}>
-            <img className="embla__image" src={image.src}/>
+            <img className="embla__image" src={image.src} alt="Product Image"/>
           </div>
         ))}
       </div>

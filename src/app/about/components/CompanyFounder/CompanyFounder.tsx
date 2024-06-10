@@ -7,7 +7,7 @@ export default function CompanyFounder() {
     <section className="company-founder">
       <div className="company-founder__container">
         <h2 className="company-founder__header">Company Founder</h2>
-        <Image className="company-founder__profile-image" src={Profile} alt=""/>
+        <Image className="company-founder__profile-image" src={Profile} alt="Robert Kamen Headshot"/>
         <div className="company-founder__content">
           <h3 className="company-founder__name"><strong>Robert Kamen</strong>, (B.A.Economics,MRT(N))</h3>
           <h4 className="company-founder__position">CEO</h4>

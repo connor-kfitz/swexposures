@@ -33,7 +33,7 @@ function ProductCard({ image, name, model, description, id }: ProductCardProps) 
     <li className="product-card">
       <Link className="product-card__link" href={`/shielding-products/${id}`}>
         <div className="product-card__image-container">
-          <img className="product-card__image" src={image.src} alt={`${model} Product`} />
+          <img className="product-card__image" src={image.src} alt="Product Image"/>
         </div>
         <div className="product-card__content">
           <h2 className="product-card__name">{name}</h2>

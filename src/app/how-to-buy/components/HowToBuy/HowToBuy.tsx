@@ -14,14 +14,14 @@ export default function HowToBuy() {
           <li className="how-to-buy__link-item">
             <h2 className="how-to-buy__link-header">For purchase in the USA:</h2>
             <Link className="how-to-buy__link" href="https://www.sironacc.com/product-category/theranostics/theranostics-syringe-vial-shields/">
-              <Image className="how-to-buy__link-image" src={Sirona} alt="Sirona Logo" />
+              <Image className="how-to-buy__link-image" src={Sirona} alt="Sirona Company Logo"/>
               <div className="how-to-buy__link-text">Click for the link to website.</div>
             </Link>
           </li>
           <li className="how-to-buy__link-item">
             <h2 className="how-to-buy__link-header">For purchase in Australia:</h2>
             <Link className="how-to-buy__link" href="https://gammagurus.com/">
-              <Image className="how-to-buy__link-image" src={Gamma} alt="Gamma Gurus Logo" />
+              <Image className="how-to-buy__link-image" src={Gamma} alt="Gamma Gurus Company Logo"/>
               <div className="how-to-buy__link-text">Click for the link to website.</div>
             </Link>
           </li>

@@ -32,7 +32,7 @@ function Article({ id, image, title, datePublished, body }: ArticleProps) {
     <li className="latest-news__item">
       <article className="latest-news__article">
         <Link className="latest-news__article-link" href={`/news/${id}`}>
-          <img className="latest-news__article-image" src={image} alt="Article"/>
+          <img className="latest-news__article-image" src={image} alt="Article Header"/>
           <h3 className="latest-news__article-header">{title}</h3>
         </Link>
         <time className="latest-news__article-date">{datePublished}</time>
