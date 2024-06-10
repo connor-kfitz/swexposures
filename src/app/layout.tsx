@@ -7,8 +7,7 @@ import "./styles/main.scss"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "SWE - Nuclear Medical Shielding",
-  description: "",
+  title: "SWE - Nuclear Medical Shielding"
 };
 
 export default function RootLayout({

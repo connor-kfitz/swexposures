@@ -3,7 +3,7 @@ import Products from "./components/Products/Products";
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: 'Shielding Products',
+  title: "Nuclear Medical Shielding Products"
 }
 
 export default async function ShieldingProductsPage() {

@@ -22,8 +22,7 @@ export async function generateMetadata({ params: { articleId } }: Params): Promi
   }
 
   return {
-    title: article.title,
-    description: `This is the page of ${article.title}`
+    title: article.title
   }
 }
 

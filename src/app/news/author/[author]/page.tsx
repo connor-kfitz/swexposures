@@ -12,8 +12,7 @@ export const revalidate = 60;
 
 export async function generateMetadata({ params: { author } }: Params): Promise<Metadata> {
   return {
-    title: author,
-    description: `This is the page of ${author}`
+    title: `Search Articles by Author: Explore a Curated Collection of Articles by ${author}`
   }
 }
 
