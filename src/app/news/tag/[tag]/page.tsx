@@ -8,6 +8,8 @@ type Params = {
   }
 }
 
+export const revalidate = 60;
+
 export async function generateMetadata({ params: { tag } }: Params): Promise<Metadata> {
   return {
     title: tag,
