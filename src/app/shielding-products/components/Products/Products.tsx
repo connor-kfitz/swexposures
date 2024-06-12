@@ -15,16 +15,36 @@ type ProductProps = {
 export default function Products({ productCategories, products }: ProductProps) {
 
   const [productList, setProductList] = useState(products);
+  const [loadingProducts, setLoadingProducts] = useState(false);
 
   return (
     <section className="products">
       <div className="products__container">
         <h1 className="products__title">Shielding Products</h1>
-        <ProductFilters productCategories={productCategories} setProductList={setProductList}/>
+        <ProductFilters productCategories={productCategories} setProductList={setProductList} setLoadingProducts={setLoadingProducts}/>
         <ul className="products__products-container">
+        {!loadingProducts ? 
+        <>
           {productList.map((product, index) => (
             <ProductCard image={product.images[0]} name={product.name} model={product.model} description={product.description} id={product.id} key={index} />
           ))}
+        </>
+          :
+          <ul className="loading">
+            <li className="loading__item">
+              <div className="loading__animation"></div>
+            </li>
+            <li className="loading__item">
+              <div className="loading__animation"></div>
+            </li>
+            <li className="loading__item">
+              <div className="loading__animation"></div>
+            </li>
+            <li className="loading__item">
+              <div className="loading__animation"></div>
+            </li>
+          </ul>
+        }
         </ul>
       </div>
     </section>
@@ -58,7 +78,8 @@ function ProductCard({ image, name, model, description, id }: ProductCardProps) 
 
 type ProductFiltersProps = {
   productCategories: ProductCategory[],
-  setProductList: Dispatch<SetStateAction<Product[]>>
+  setProductList: Dispatch<SetStateAction<Product[]>>,
+  setLoadingProducts: Dispatch<SetStateAction<boolean>>
 }
 
 class FilterOptions {
@@ -70,7 +91,7 @@ class FilterOptions {
   sortBy: SortDirection
 }
 
-function ProductFilters({ productCategories, setProductList }: ProductFiltersProps) {
+function ProductFilters({ productCategories, setProductList, setLoadingProducts }: ProductFiltersProps) {
 
   const [filterOptions, setFilterOptions] = useState(new FilterOptions("", SortDirection.None));
 
@@ -79,8 +100,10 @@ function ProductFilters({ productCategories, setProductList }: ProductFiltersPro
   }, [filterOptions])
 
   async function setProducts() {
+    setLoadingProducts(true);
     if (Object.values(filterOptions).every(value => value === "")) { setProductList(await getAllProducts()) }
     else { setProductList(await getFilteredProducts(filterOptions.category, filterOptions.sortBy)) }
+    setLoadingProducts(false);
   }
 
   async function filterByCategory(event: React.ChangeEvent<HTMLSelectElement>) {
