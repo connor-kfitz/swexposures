@@ -93,5 +93,9 @@ $breakpoint-three: 500px;
         padding: .5rem;
         border-radius: .25rem;
         outline: none;
+
+        &:not(:last-child) {
+            margin-right: 2rem;
+        }
     }
 }

@@ -4,6 +4,7 @@ import getAllProducts from "@/app/lib/getAllProducts";
 import getFilteredProducts from "@/app/lib/getFilteredProducts";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { capitalizeFirstLetter } from "@/app/common/utils";
+import { SortDirection } from "@/app/common/enums";
 import "./Products.scss";
 
 type ProductProps = {
@@ -61,15 +62,17 @@ type ProductFiltersProps = {
 }
 
 class FilterOptions {
-  constructor(category: string) {
+  constructor(category: string, sortBy: SortDirection) {
     this.category = category
+    this.sortBy = sortBy;
   }
   category: string;
+  sortBy: SortDirection
 }
 
 function ProductFilters({ productCategories, setProductList }: ProductFiltersProps) {
 
-  const [filterOptions, setFilterOptions] = useState(new FilterOptions(""));
+  const [filterOptions, setFilterOptions] = useState(new FilterOptions("", SortDirection.None));
 
   useEffect(() => {
     setProducts();
@@ -77,13 +80,19 @@ function ProductFilters({ productCategories, setProductList }: ProductFiltersPro
 
   async function setProducts() {
     if (Object.values(filterOptions).every(value => value === "")) { setProductList(await getAllProducts()) }
-    else { setProductList(await getFilteredProducts(filterOptions.category)) }
+    else { setProductList(await getFilteredProducts(filterOptions.category, filterOptions.sortBy)) }
   }
 
   async function filterByCategory(event: React.ChangeEvent<HTMLSelectElement>) {
     let selectedOption = event.target.options[event.target.selectedIndex].text;
     if (event.target.value === "0") selectedOption = "";
     setFilterOptions((previous) => ({ ...previous, "category": selectedOption.toLowerCase() }));
+  }
+
+  async function filterBySortDirection(event: React.ChangeEvent<HTMLSelectElement>) {
+    let options = [SortDirection.None, SortDirection.Ascending, SortDirection.Descending];
+    let selectedOption = options[parseInt(event.target.value)];
+    setFilterOptions((previous) => ({ ...previous, "sortBy": selectedOption }));
   }
 
   return (
@@ -94,6 +103,11 @@ function ProductFilters({ productCategories, setProductList }: ProductFiltersPro
           {productCategories?.map((categoy, index) => (
             <option className="filters__dropdown-option" value={index + 1} key={index}>{capitalizeFirstLetter(categoy.name)}</option>
           ))}
+        </select>
+        <select className="filters__dropdown" onChange={filterBySortDirection}>
+          <option className="filters__dropdown-option" value={0}>Sort By</option>
+          <option className="filters__dropdown-option" value={1}>A-Z</option>
+          <option className="filters__dropdown-option" value={2}>Z-A</option>
         </select>
       </li>
     </ul>
