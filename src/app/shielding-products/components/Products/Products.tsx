@@ -26,7 +26,7 @@ export default function Products({ productCategories, products }: ProductProps) 
         {!loadingProducts ? 
         <>
           {productList.map((product, index) => (
-            <ProductCard image={product.images[0]} name={product.name} model={product.model} description={product.description} id={product.id} key={index} />
+            <ProductCard image={product.images[0]} name={product.name} model={product.model} category={product.category} id={product.id} key={index} />
           ))}
         </>
           :
@@ -55,11 +55,11 @@ type ProductCardProps = {
   image: ProductImage,
   name: string,
   model: string,
-  description: string,
+  category: string,
   id: string
 }
 
-function ProductCard({ image, name, model, description, id }: ProductCardProps) {
+function ProductCard({ image, name, model, category, id }: ProductCardProps) {
   return (
     <li className="product-card">
       <Link className="product-card__link" href={`/shielding-products/${id}`}>
@@ -68,8 +68,8 @@ function ProductCard({ image, name, model, description, id }: ProductCardProps) 
         </div>
         <div className="product-card__content">
           <h2 className="product-card__name">{name}</h2>
-          <div className="product-card__model">{model}</div>
-          <p className="product-card__description">{description}</p>
+          <div className="product-card__info">{model}</div>
+          <div className="product-card__info">{capitalizeFirstLetter(category)}</div>
         </div>
       </Link>
     </li>

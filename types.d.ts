@@ -27,6 +27,7 @@ type Product = {
     features: string[],
     specifications: string[],
     videoURL: string,
+    category: string,
     images: ProductImage[],
     table: any
 }
