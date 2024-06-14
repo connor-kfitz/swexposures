@@ -52,7 +52,7 @@ $breakpoint-one: 960px;
     &__link-container {
         margin: auto;
         list-style: none;
-        padding-right: 8.5rem;
+        padding-right: 13.5rem;
 
         @media (max-width: $breakpoint-one) {
             display: none;
@@ -220,8 +220,8 @@ $breakpoint-one: 960px;
     &__link-container {
         margin: auto;
         list-style: none;
-        padding-right: 8.5rem;
-
+        padding-right: 13.5rem;
+        
         @media (max-width: $breakpoint-one) {
             display: none;
         }

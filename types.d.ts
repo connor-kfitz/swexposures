@@ -14,6 +14,11 @@ type NewsArticle = {
     image: ProductImage
 }
 
+type ProductCategory = {
+    name: string,
+    image: ProductImage
+}
+
 type Product = {
     id: string,
     name: string,
@@ -22,6 +27,7 @@ type Product = {
     features: string[],
     specifications: string[],
     videoURL: string,
+    category: string,
     images: ProductImage[],
     table: any
 }

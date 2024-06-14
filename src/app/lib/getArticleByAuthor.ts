@@ -1,4 +1,4 @@
-import { collection, getDocs, query, where, limit } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../firebase/firebase";
 import { dateToDMonthY } from "../common/utils";
 
