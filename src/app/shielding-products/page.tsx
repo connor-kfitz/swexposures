@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   title: "Nuclear Medical Shielding Products"
 }
 
+export const revalidate = 60;
+
 export default async function ShieldingProductsPage() {
 
   let productCategories: ProductCategory[] = await getAllProductCategories(); 
