@@ -22,6 +22,7 @@ export default function Products({ productCategories, products }: ProductProps) 
       <div className="products__container">
         <h1 className="products__title">Shielding Products</h1>
         <ProductFilters productCategories={productCategories} setProductList={setProductList} setLoadingProducts={setLoadingProducts}/>
+        {products ? 
         <ul className="products__products-container">
         {!loadingProducts ? 
         <>
@@ -45,7 +46,7 @@ export default function Products({ productCategories, products }: ProductProps) 
             </li>
           </ul>
         }
-        </ul>
+        </ul> : <div className="products__text">Sorry, no products are currently available.</div>}
       </div>
     </section>
   )
