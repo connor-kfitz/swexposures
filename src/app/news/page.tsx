@@ -6,6 +6,8 @@ export const metadata: Metadata = {
   title: "Latest News About South West Exposures"
 }
 
+export const revalidate = 60;
+
 export default async function NewsPage() {
 
   let newsArticles: NewsArticle[] = await getLatestArticles(10);
