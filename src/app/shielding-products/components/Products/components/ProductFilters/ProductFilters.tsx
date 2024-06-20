@@ -53,10 +53,10 @@ export default function ProductFilters({ productCategories, setProductList, setL
   return (
     <ul className="filters">
       <li className="filters__item">
-        <Dropdown options={productCategories.map(category => category.name)} field="Select Category" action={filterByCategory} activeItem={filterOptions.category} />
+        <Dropdown options={productCategories.map(category => category.name)} field="Select Category" action={filterByCategory} activeItem={filterOptions.category} zIndex={85}/>
       </li>
       <li className="filters__item">
-        <Dropdown options={sortDirectionOptions} field="Sort By" action={filterBySortDirection} activeItem={filterOptions.sortBy} />
+        <Dropdown options={sortDirectionOptions} field="Sort By" action={filterBySortDirection} activeItem={filterOptions.sortBy} zIndex={80}/>
       </li>
     </ul>
   )
@@ -66,10 +66,11 @@ type DropdownProps = {
     options: string[] | SortDirection[],
     field: string,
     action: Function,
-    activeItem: string
+    activeItem: string,
+    zIndex: number
 }
 
-function Dropdown({ options, field, action, activeItem }: DropdownProps) {
+function Dropdown({ options, field, action, activeItem, zIndex }: DropdownProps) {
 
   const [dropdown, setDropdown] = useState(false);
 
@@ -89,7 +90,7 @@ function Dropdown({ options, field, action, activeItem }: DropdownProps) {
   });
 
   return (
-    <button className="dropdown" onClick={() => setDropdown((previous) => !previous)} ref={dropdownRef}>
+    <button className="dropdown" onClick={() => setDropdown((previous) => !previous)} ref={dropdownRef} style={{zIndex: zIndex}}>
       <span className="dropdown__selected">{!activeItem ? field : capitalizeFirstLetter(activeItem)}</span>
       <Image className="dropdown__arrow-icon" src={DropdownArrow} alt="Down Arrow"/>
       <ul className={`dropdown__options-container` + (dropdown ? " active" : "")}>
