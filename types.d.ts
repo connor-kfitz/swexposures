@@ -15,8 +15,7 @@ type NewsArticle = {
 }
 
 type ProductCategory = {
-    name: string,
-    image: ProductImage
+    name: string
 }
 
 type Product = {

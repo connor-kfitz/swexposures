@@ -151,24 +151,3 @@ $breakpoint-three: 500px;
         -webkit-box-orient: vertical;
     }
 }
-
-.filters {
-    display: flex;
-    margin-bottom: 4rem;
-    margin-left: 1rem;
-
-    &__dropdown {
-        padding: .5rem;
-        border-radius: .25rem;
-        outline: none;
-        font-size: 1.6rem;
-
-        @media (max-width: $breakpoint-two) {
-            font-size: 1.4rem;
-        }
-
-        &:not(:last-child) {
-            margin-right: 2rem;
-        }
-    }
-}

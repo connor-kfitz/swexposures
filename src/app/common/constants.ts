@@ -1,3 +1,5 @@
+import { SortDirection } from "@/app/common/enums";
+
 export const navItems: NavItem[] = [
     {
         name: 'South West Exposures',
@@ -23,4 +25,9 @@ export const navItems: NavItem[] = [
         name: 'Quote & Information Request',
         path: '/contact'
     }
-  ]
+];
+
+export const sortDirectionOptions: SortDirection[] = [
+    SortDirection.Ascending,
+    SortDirection.Descending
+]
