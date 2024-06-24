@@ -22,7 +22,8 @@ export async function generateMetadata({ params: { articleId } }: Params): Promi
   }
 
   return {
-    title: article.title
+    title: article.title,
+    description: article.body.substring(0, 170)
   }
 }
 
